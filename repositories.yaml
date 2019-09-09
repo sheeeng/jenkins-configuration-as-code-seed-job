@@ -1,0 +1,15 @@
+# Regular Expression Pattern
+# `?m`                                  Permit Named Capturing Groups
+# `git@github.com`                      Literal String
+# `(?<projectOrganization>[\w]+)`       The 'projectOrganization' matched named capturing groups, accessible from the match object.
+# `/`                                   Literal String
+# `(?<projectName>(?!\.git$)[\w_\d-]+)` The 'projectName' matched named capturing groups, which includes a negative look ahead.
+# `\.git`                               Literal String
+# `$`                                   End of String
+regularExpressionPattern: (?m)git@github.com:(?<projectOrganization>[\w]+)\/(?<projectName>(?!\.git$)[\w_\d-]+)\.git$
+
+gitRepositoryUrls:
+  # Ensure any given Git repository URL matches the above Java regular expression pattern.
+  - 'git@github.com:sheeeng/jaunty-java.git'
+  - 'git@github.com:sheeeng/precise-python.git'
+  - 'git@github.com:sheeeng/nervy-nodejs.git'
