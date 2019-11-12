@@ -73,7 +73,7 @@ public class JobFactory {
                         git {
                             remote {
                                 url(args.gitUrl)
-                                credentials('GITHUB_SSH_KEY')
+                                credentials(credentialsId)
                             }
                             branches(args.gitBranch)
                         }
@@ -99,7 +99,7 @@ public class JobFactory {
                             }
                             remote {
                                 url(args.gitUrl)
-                                credentials('GITHUB_SSH_KEY')
+                                credentials(credentialsId)
                             }
                             branches(args.gitBranch)
                         }

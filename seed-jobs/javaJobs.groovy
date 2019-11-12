@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 
-import JobFactory
+import utilities.JobFactory
 def factory = new JobFactory(this)
 
 factory.createFolder(
