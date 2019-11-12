@@ -4,14 +4,13 @@ import utilities.JobFactory
 def factory = new JobFactory(this)
 
 factory.createFolder(
-    name: "nodejs",
+    name: "acme/nodejs",
     displayName: "NodeJS",
     description: "Description of NodeJS Projects."
 )
 
-factory.createFolder(name: "nodejs/acme")
 factory.createMultiBranchPipeline(
-    name: "nodejs/acme/nervy-nodejs",
+    name: "acme/nodejs/nervy-nodejs",
     jobDescription: "Multibranch Pipeline Job for NodeJS project of Acme team.",
     id: "9fd5b299-6c39-417c-97b9-815f40944555",
     gitUrl: "git@github.com:sheeeng/nervy-nodejs.git",
