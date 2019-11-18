@@ -23,7 +23,7 @@ import javaposse.jobdsl.dsl.helpers.scm.GitContext
  */
 public class JobFactory {
     private DslFactory dslFactory
-    private String credentialsId = 'GITHUB_SSH_KEY'
+    private String gitCredentialsId = 'GITHUB_SSH_KEY'
 
     JobFactory(DslFactory dslFactory) {
         this.dslFactory = dslFactory
@@ -36,7 +36,7 @@ public class JobFactory {
                 git {
                     remote {
                         url(args.gitUrl)
-                        credentials(credentialsId)
+                        credentials(gitCredentialsId)
                     }
                     branch(args.gitBranch)
                 }
@@ -73,7 +73,7 @@ public class JobFactory {
                         git {
                             remote {
                                 url(args.gitUrl)
-                                credentials(credentialsId)
+                                credentials(gitCredentialsId)
                             }
                             branches(args.gitBranch)
                         }
@@ -99,7 +99,7 @@ public class JobFactory {
                             }
                             remote {
                                 url(args.gitUrl)
-                                credentials(credentialsId)
+                                credentials(gitCredentialsId)
                             }
                             branches(args.gitBranch)
                         }
@@ -121,7 +121,7 @@ public class JobFactory {
             branchSources {
                 git {
                     id(args.id)
-                    credentialsId('GITHUB_SSH_KEY')
+                    credentialsId(gitCredentialsId)
                     remote(args.gitUrl)
                     includes(args.includes)
                 }
